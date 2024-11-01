@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Створити лот</title>
+</head>
+
+<body>
+  <h2>Створити лот</h2>
+  <form action="create_lot.php" method="POST">
+    <select name="category_id" required>
+      <option value="1">Воблери</option>
+      <!-- Інші категорії -->
+    </select><br>
+    <input type="text" name="title" placeholder="Назва лота" required><br>
+    <textarea name="description" placeholder="Опис лота"></textarea><br>
+    <input type="number" name="start_price" placeholder="Стартова ціна" required><br>
+    <input type="datetime-local" name="end_time" required><br>
+    <button type="submit">Створити лот</button>
+  </form>
+</body>
+
+</html>

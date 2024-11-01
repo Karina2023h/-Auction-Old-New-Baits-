@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auction Old & New Baits</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./img/photo_2024-10-29_18-01-27.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="block-header">
+    <nav class="header-nav">
+      <a href="#" class="header-link">Аукціон</a>
+      <a href="#" class="header-link">Правила</a>
+      <a href="#" class="header-link">Топ лотів</a>
+      <a href="#" class="header-link">Лоти від 1 грн</a>
+      <a href="#" class="header-link">Новини</a>
+      <a href="#" class="header-link">Форум</a>
+      <a href="#" class="header-link">Контакти</a>
+    </nav>
+  </div>
+  <header>
+    <div class="logo">
+      <img src="./img/photo_2024-10-29_18-01-27.jpg" alt="Auction Old & New Baits">
+    </div>
+    <nav>
+      <ul class="blocki">
+        <button class="btn-header">Створити лот</button>
+        <li><a style="color: #FF3700; font-size: 23px;" href="login.html"><i class="fas fa-user"></i></a></li>
+        <li>
+          <a style="color: #FF3700; font-size: 23px;" href="#" id="open-search"><i class="fas fa-search"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Вікно для пошуку -->
+  <div class="search-overlay" id="search-overlay" style="visibility: hidden;">
+    <div class="search-box">
+      <button id="close-search" class="close-button">×</button>
+      <input type="text" id="search-input" placeholder="Пошук по сайту..." aria-label="Пошук" class="search-input">
+      <button type="button" id="search-button" class="search-button">Знайти</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+
+
+
+
+  <main>
+
+    <section class="categories">
+      <div class="sidebar">
+        <h2 class="category-title">Розділи аукціону</h2>
+        <ul class="category-list">
+          <li class="category-item"><a href="#" class="category-link">Нові лоти за 24 години</a></li>
+          <li class="category-item"><a href="#" class="category-link">Приманки</a></li>
+          <li class="category-item"><a href="#" class="category-link">Ліска, плетені шнури</a></li>
+          <li class="category-item"><a href="#" class="category-link">Удилища</a></li>
+          <li class="category-item"><a href="#" class="category-link">Рибальські котушки</a></li>
+          <li class="category-item"><a href="#" class="category-link">Гачки</a></li>
+          <li class="category-item"><a href="#" class="category-link">Рибальські вертлюги, карабіни, повідці</a></li>
+          <li class="category-item"><a href="#" class="category-link">Аксесуари</a></li>
+          <li class="category-item"><a href="#" class="category-link">Все для лиття силікону</a></li>
+          <li class="category-item"><a href="#" class="category-link">Карпово-фідерні снасті</a></li>
+          <li class="category-item"><a href="#" class="category-link">Для зимової риболовлі</a></li>
+          <li class="category-item"><a href="#" class="category-link">Човни та мотори</a></li>
+          <li class="category-item"><a href="#" class="category-link">Нахлист</a></li>
+          <li class="category-item"><a href="#" class="category-link">Рибальські сувеніри</a></li>
+          <li class="category-item"><a href="#" class="category-link">Рибальська електроніка</a></li>
+          <li class="category-item"><a href="#" class="category-link">Туристичне спорядження</a></li>
+          <li class="category-item"><a href="#" class="category-link">Екіпірування</a></li>
+          <li class="category-item"><a href="#" class="category-link">Інше</a></li>
+        </ul>
+        <div class="foto-pravila">
+          <a href="rules.html">
+            <img src="./img/b8a9d5684b6c58bf44cb9588e058b5da.jpg" alt="Правила" class="foto-image">
+          </a>
+          <p class="foto-text">Правила аукціону</p>
+        </div>
+
+      </div>
+
+      <div class="auction-home">
+
+        <!-- Топ/реклама -->
+        <div class="lots-section top-ad">
+          <h3 class="section-title">
+            <img src="./img/icon/icons8-реклама-100.png" alt="Іконка" class="section-icon">
+            <!-- Вкажіть правильний шлях до зображення -->
+            Топ/реклама
+          </h3>
+          <button class="scroll-button" onclick="scrollLeft('.top-ad .lots-row')">❮</button>
+          <div class="lots-row">
+            <div class="lot-item empty" onclick="openLotPage('lot1.html')">
+              <img src="#" alt="Топ лот" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot2.html')">
+              <img src="#" alt="Топ лот" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot2.html')">
+              <img src="#" alt="Топ лот" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot2.html')">
+              <img src="#" alt="Топ лот" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot3.html')">
+              <img src="#" alt="Топ лот" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot4.html')">
+              <img src="#" alt="Топ лот" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot5.html')">
+              <img src="#" alt="Топ лот" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+          </div>
+          <button class="scroll-button" onclick="scrollRight('.top-ad .lots-row')">❯</button>
+        </div>
+
+        <!-- Нові лоти -->
+        <div class="lots-section new-lots">
+          <h3 class="section-title">
+            <img src="./img/icon/icons8-совершенно-новый-100.png" alt="Іконка" class="section-icon">
+            Нові лоти
+          </h3>
+          <button class="scroll-button" onclick="scrollLeft('.new-lots .lots-row')">❮</button>
+          <div class="lots-row">
+            <div class="lot-item empty" onclick="openLotPage('lot6.html')">
+              <img src="#" alt="Новий лот 1" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot6.html')">
+              <img src="#" alt="Новий лот 1" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot6.html')">
+              <img src="#" alt="Новий лот 1" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot7.html')">
+              <img src="#" alt="Новий лот 2" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot8.html')">
+              <img src="#" alt="Новий лот 3" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot9.html')">
+              <img src="#" alt="Новий лот 4" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot10.html')">
+              <img src="#" alt="Новий лот 5" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+          </div>
+          <button class="scroll-button" onclick="scrollRight('.new-lots .lots-row')">❯</button>
+        </div>
+
+        <!-- Популярні лоти -->
+        <div class="lots-section popular-lots">
+          <h3 class="section-title">
+            <img src="./img/icon/icons8-tokens-64.png" alt="Іконка" class="section-icon">
+            Популярні лоти
+          </h3>
+          <button class="scroll-button" onclick="scrollLeft('.popular-lots .lots-row')">❮</button>
+          <div class="lots-row">
+            <div class="lot-item empty" onclick="openLotPage('lot11.html')">
+              <img src="#" alt="Популярний лот 1" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot11.html')">
+              <img src="#" alt="Популярний лот 1" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot11.html')">
+              <img src="#" alt="Популярний лот 1" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot12.html')">
+              <img src="#" alt="Популярний лот 2" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot13.html')">
+              <img src="#" alt="Популярний лот 3" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot14.html')">
+              <img src="#" alt="Популярний лот 4" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot15.html')">
+              <img src="#" alt="Популярний лот 5" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+          </div>
+          <button class="scroll-button" onclick="scrollRight('.popular-lots .lots-row')">❯</button>
+        </div>
+
+        <!-- Лоти від 1 грн -->
+        <div class="lots-section from-one-uah">
+          <h3 class="section-title">
+            <img src="./img/icon/icons8-1-в-кружке-100.png" alt="Іконка" class="section-icon">
+            Лоти від 1 грн
+          </h3>
+          <button class="scroll-button" onclick="scrollLeft('.from-one-uah .lots-row')">❮</button>
+          <div class="lots-row">
+            <div class="lot-item empty" onclick="openLotPage('lot16.html')">
+              <img src="#" alt="Лот від 1 грн" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot17.html')">
+              <img src="#" alt="Лот від 1 грн" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot17.html')">
+              <img src="#" alt="Лот від 1 грн" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot17.html')">
+              <img src="#" alt="Лот від 1 грн" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot18.html')">
+              <img src="#" alt="Лот від 1 грн" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot19.html')">
+              <img src="#" alt="Лот від 1 грн" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+            <div class="lot-item empty" onclick="openLotPage('lot20.html')">
+              <img src="#" alt="Лот від 1 грн" class="lot-image">
+              <h4 class="lot-name">Пусто, добавьте лот через кабинет</h4>
+              <p class="lot-price">Ціна: -- грн</p>
+            </div>
+          </div>
+          <button class="scroll-button" onclick="scrollRight('.from-one-uah .lots-row')">❯</button>
+        </div>
+
+        <!-- Рекламные баннеры -->
+        <div class="ad-container">
+          <div class="large-banner-container">
+            <img src="./img/357c94bee1d25f71220af5c2715d6b62.webp" alt="Великий баннер" class="large-banner-image">
+          </div>
+          <div class="small-banners">
+            <div class="small-banner" onclick="openBannerPage('banner1.html')">
+              <img src="./img/photo_2024-11-01_15-51-40.jpg" alt="Баннер 1" class="small-banner-image">
+            </div>
+            <div class="small-banner" onclick="openBannerPage('banner2.html')">
+              <img src="./img/photo_2024-11-01_15-51-44.jpg" alt="Баннер 2" class="small-banner-image">
+            </div>
+          </div>
+
+        </div>
+
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="./img/photo_2024-10-29_18-01-27.jpg" alt="Логотип сайту" />
+        <p>Це Український Аукціон рибацького спорядження! Тут ви знайдете найкращі пропозиції за привабливими цінами.
+          Основною
+          категорією аукціону є спінінгові приманки (воблери), також представлені інші категорії снастей та все, що
+          пов'язане з
+          рибалкою. На нашому аукціоні ви можете виставляти свої снасті в необмеженій кількості лотів.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Наші проекти</h3>
+        <ul>
+          <li><a href="#">Аукціон</a></li>
+          <li><a href="#">Правила</a></li>
+          <li><a href="#">Контакти</a></li>
+          <li><a href="#">Форум</a></li>
+          <li><a href="#">Допомога</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Auction Old & New Baits. Всі права захищені.</p>
+    </div>
+  </footer>
+
+  <script>
+    function scrollLeft(selector) {
+      const row = document.querySelector(selector);
+      row.scrollBy({
+        left: -200,
+        behavior: 'smooth'
+      });
+    }
+
+    function scrollRight(selector) {
+      const row = document.querySelector(selector);
+      row.scrollBy({
+        left: 200,
+        behavior: 'smooth'
+      });
+    }
+
+    function openLotPage(url) {
+      window.open(url, '_blank');
+    }
+
+    function openBannerPage(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+  <script src="script.js"></script>
+  <script src="sing.js"></script>
+</body>
+
+</html>
